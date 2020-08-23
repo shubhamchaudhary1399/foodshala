@@ -1,0 +1,193 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #FFF;
+	z-index: 200;
+	padding: 11px 20px;
+	margin: 0px;
+	overflow: hidden;
+	text-align: right;
+	height: 52px;
+    -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
+    box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
+
+}
+
+.navbar .max-width{
+	margin: auto;
+	overflow: hidden;
+}
+
+.navbar .navbar-brand{
+	float: left !important;
+}
+
+.navbar .navbar-left{
+	float: left;
+	margin-top: 4px;
+}
+
+.navbar .navbar-right{
+	float: right;
+	margin-top: 4px;
+}
+
+.brand-link{
+	text-decoration: none;
+	color: #71a1d1;
+}
+
+.brand-link:hover{
+	color: #81d0e8;
+}
+
+.foodshala{
+	float: right;
+	margin-top: 15px;
+	padding: 0 4px;
+}
+
+.menu-link{
+  position: relative;
+	background: #71a1d1;
+	color: #FFF;
+	border-radius: 2px;
+	margin-top: 2px;
+}
+
+.menu-link:hover{
+	color: #FFF !important;
+	background: #81d0e8;
+}
+
+.hide-lg{
+	display: none;
+}
+
+.cbtn{
+	display: none;
+}
+
+.sidebar-navbar{
+	display: none;
+}
+
+.nav-links{
+	box-sizing: border-box;
+	width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+	.overlay{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top:0;
+		bottom: 0;
+		z-index: 900;
+		background:rgba(0,0,0,0.5);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.hide-lg{
+	    display: block;
+   		padding: 10px 5px;
+    	height: 14px;
+    	float: left;
+    	margin-top: 0;
+    }
+
+	.navbar{
+		padding: 11px;
+		height: 34px;
+		overflow: hidden;
+	}
+
+	.navbar .navbar-brand{
+		margin-left: 12px;
+	}
+
+	.navbar .max-width{
+		max-width: auto;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	.navbar-right, .navbar-left{
+		display: none !important;
+	}
+
+	.sidebar-navbar{
+		display: block;
+		left: -250px;
+		width: 250px;
+		z-index: 1000;
+		top:0;
+		float: right !important;
+		position: fixed;
+		background: #FFFFFF;
+		height: 100%;
+		transition: all 0.3s ease-in-out;
+		box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
+	}
+
+	.sidebar-navbar ul{
+		list-style-type: none;
+		margin: 10px;
+		padding: 0;
+	}
+
+	.sidebar-navbar li .material-icon{
+		text-align: left;
+		display: inline;
+		margin-right: 20px;
+	}
+
+	.sidebar-navbar li .mt-aside{
+		position: relative;
+		margin-left: -4px;
+		top: -4px;
+	}
+
+
+	.nav_ul>li>a>img {
+    	position: relative;
+    	top: 7px;
+	}
+
+	.sidebar-navbar li a{
+		width: 100%;
+		display: block;
+		padding: 12px;
+		color: rgba(0,0,0,0.7);
+		text-decoration: none;
+		font-size: 14px;
+		text-align: left;
+	}
+
+	.nav-hidden{
+		left: 0px !important;
+	}
+
+	.cbtn{
+		width: 40px;
+		height: 40px;
+		padding-top: 28px;
+		font-size: 35px;
+		font-weight: 400;
+		line-height: 0px;
+		color: #575151;
+		text-align: center;
+		display: block;
+		float: right;
+		cursor: pointer;
+	}
+
+
+}
