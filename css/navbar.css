@@ -1,4 +1,4 @@
-.navbar {
+.navbar-food {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,44 +9,41 @@
 	margin: 0px;
 	overflow: hidden;
 	text-align: right;
-	height: 52px;
     -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
     -moz-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
     box-shadow: 0 2px 4px 0px rgba(0,0,0,0.14);
 
 }
 
-.navbar .max-width{
+.navbar-food .max-width-nav{
 	margin: auto;
 	overflow: hidden;
 }
 
-.navbar .navbar-brand{
+.navbar-food .nav-br-fs{
 	float: left !important;
 }
 
-.navbar .navbar-left{
+.navbar-food .navbar-l{
 	float: left;
-	margin-top: 4px;
 }
 
-.navbar .navbar-right{
+.navbar-food .navbar-r{
 	float: right;
-	margin-top: 4px;
 }
 
-.brand-link{
+.br-fs-link{
 	text-decoration: none;
 	color: #71a1d1;
 }
 
-.brand-link:hover{
+.br-fs-link:hover{
 	color: #81d0e8;
 }
 
 .foodshala{
 	float: right;
-	margin-top: 15px;
+	margin-top: 12px;
 	padding: 0 4px;
 }
 
@@ -97,29 +94,29 @@
 
 	.hide-lg{
 	    display: block;
-   		padding: 10px 5px;
+   		margin: 12px 10px;
     	height: 14px;
     	float: left;
-    	margin-top: 0;
     }
 
-	.navbar{
+	.navbar-food{
 		padding: 11px;
-		height: 34px;
 		overflow: hidden;
 	}
 
-	.navbar .navbar-brand{
-		margin-left: 12px;
+	.navbar-food .nav-br-fs{
+		max-width: 130px;
+		margin: auto;
+    float: none !important;
 	}
 
-	.navbar .max-width{
+	.navbar-food .max-width-nav{
 		max-width: auto;
 		margin: auto;
 		overflow: hidden;
 	}
 
-	.navbar-right, .navbar-left{
+	.navbar-r, .navbar-l{
 		display: none !important;
 	}
 
@@ -153,12 +150,6 @@
 		position: relative;
 		margin-left: -4px;
 		top: -4px;
-	}
-
-
-	.nav_ul>li>a>img {
-    	position: relative;
-    	top: 7px;
 	}
 
 	.sidebar-navbar li a{
