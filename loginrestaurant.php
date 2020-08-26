@@ -1,3 +1,8 @@
+<?php require("includes/common.php");
+if (isset($_SESSION['email'])) {
+header('location: index.php');
+}?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +22,7 @@
 			<div class="form-heading">
 				<h5>Login As Restaurant</h5>
 			</div>
-			<form action="login_script.php" method="POST">
+			<form action="loginrestaurant_script.php" method="POST">
 				<label for="email">Email</label><br>
 				<input type="email" name="Email" id="email" placeholder="Email" required="">
 

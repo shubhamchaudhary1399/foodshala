@@ -1,0 +1,83 @@
+.active{
+	border-radius: 25px;
+	background: #71a1d1;;
+	color: #FFFFFF !important;
+}
+
+.active:hover{
+	background: #81d0e8;
+	color: #FFFFFF !important;
+}
+
+.menu-link{
+  position: relative;
+	background: #71a1d1;
+	color: #FFF;
+	border-radius: 2px;
+	margin-top: 2px;
+}
+
+.menu-link:hover{
+	color: #FFF !important;
+	background: #81d0e8;
+}
+
+.text-bt{
+	color: #000000;
+	padding: 10px 20px!important;
+	text-align: left;
+}
+
+.text-bt:hover{
+	color: #000000;
+}
+
+.mt-aside{
+	position: relative;
+	top: -6px;
+	margin-left: -5px;
+}
+
+#addfood,#back{
+	background: #ffffff;
+	border: 1px solid #71a1d1;
+	border-radius: 20px;
+	color: #71a1d1;
+	margin-bottom: 10px;
+}
+
+#addfood:hover,#back:hover{
+	background: #71a1d1;
+	color:#FFFFFF;
+}
+
+.form-group input[type=file]{
+	opacity: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.card-room{
+	margin-bottom: 10px;
+}
+
+.room-image{
+	max-width: 100%;
+	max-height: 100px;
+}
+
+.btn:focus, .btn:active {
+	outline: none !important;
+	transition: 0.5s ease;
+	box-shadow: none !important;
+}
+
+input:focus, input:active, textarea:focus, textarea:active, select:focus, select:active{
+	outline: none !important;
+	border-color: #71a1d1 !important;
+	transition: 0.5s ease;
+  box-shadow: 0px 0px 4px 0px rgba(129,208,232,1)!important;
+}

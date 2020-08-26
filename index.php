@@ -1,3 +1,4 @@
+<?php require("includes/common.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>

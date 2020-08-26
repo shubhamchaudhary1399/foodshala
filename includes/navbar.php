@@ -9,17 +9,17 @@
         </a>
 			</div>
 
-		<?php
-            if (isset($_SESSION['email'])) { ?>
+		<?php if(isset($_SESSION['email'])) {
+				if(trim($_SESSION['type']) == "customer"){ ?>
 
             <div class="navbar-l">
-				<a href="qubuser.php" class="links">Hello <?php echo $_SESSION['firstname']; ?></a>
+				<a href="settings.php" class="links">Hello <?php echo $_SESSION['firstname']; ?></a>
 			</div>
 
 			<div class="navbar-r">
         <a href="fleet.php" class="links">Offers</a>
 				<a href="drive.php" class="links">Rewards</a>
-				<a href="aboutus.php" class="links">Help</a>
+				<a href="logout_script.php" class="links">Logout</a>
 				<a class="menu-link links" href="menu.php">See Menu</a>
 			</div>
 		</div>
@@ -40,9 +40,9 @@
 				<li><a href="login.php" class="links nav-links">
           <span class="material-icons material-icon">fastfood</span>
           <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
+				<li><a href="logout_script.php" class="links nav-links">
           <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
+          <span class="mt-aside">Logout</span></a></li>
 
 			</ul>
 		</div>
@@ -50,7 +50,47 @@
 		<!-- ------------------------------ -->
 
 
-        <?php } else {  ?>
+	<?php }
+	else if(trim($_SESSION['type']) == "restaurant"){	?>
+
+		<div class="navbar-l">
+<a href="settings.php" class="links">Hello <?php echo $_SESSION['name']; ?></a>
+</div>
+
+<div class="navbar-r">
+<a href="fleet.php" class="links">Offers</a>
+<a href="drive.php" class="links">Rewards</a>
+<a href="logout_script.php" class="links">Logout</a>
+<a class="menu-link links" href="addmenuitem.php">Add Menu item</a>
+</div>
+</div>
+</div>
+
+<div class="sidebar-navbar" style="">
+<span class="cbtn" onclick="burger()">&times;</span>
+<ul class="nav_ul">
+<li><a href="login.php" class="links nav-links">
+	<span class="material-icons material-icon">fastfood</span>
+	<span class="mt-aside">Login</span></a></li>
+<li><a href="login.php" class="links nav-links">
+	<span class="material-icons material-icon">fastfood</span>
+	<span class="mt-aside">Login</span></a></li>
+<li><a href="login.php" class="links nav-links">
+	<span class="material-icons material-icon">fastfood</span>
+	<span class="mt-aside">Login</span></a></li>
+<li><a href="login.php" class="links nav-links">
+	<span class="material-icons material-icon">fastfood</span>
+	<span class="mt-aside">Login</span></a></li>
+<li><a href="login.php" class="links nav-links">
+	<span class="material-icons material-icon">fastfood</span>
+	<span class="mt-aside">Login</span></a></li>
+
+</ul>
+</div>
+
+<!-- ------------------------------ -->
+
+<?php }} else {  ?>
 
             <div class="navbar-l">
 				<a href="login.php" class="links">Login</a>
