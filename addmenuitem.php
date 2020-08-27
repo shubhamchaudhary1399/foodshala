@@ -1,15 +1,15 @@
 <?php require("includes/common.php");
 if(isset($_SESSION['email'])){
     if(trim($_SESSION['type']) != "restaurant"){
-      header('location: login.php');
+      header('location: menu.php');
     }
 }else{
-      header('location: index.php');
+      header('location: login.php');
 }?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard | FoodShala</title>
+	<title>Restaurant Menu | FoodShala</title>
 	<?php include 'includes/head.php' ?>
   <link rel="stylesheet" type="text/css" href="css/addmenuitem.css">
 </head>
@@ -21,7 +21,7 @@ if(isset($_SESSION['email'])){
 			<div class="col-lg-2 col-md-3">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link text-bt" href="dashboard">
+						<a class="nav-link text-bt" href="dashboard.php">
 							<i class="material-icons">dashboard</i>
 							<span class="mt-aside pl-3">Dashboard</span>
 						</a>
@@ -33,7 +33,7 @@ if(isset($_SESSION['email'])){
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-bt" href="#">
+						<a class="nav-link text-bt" href="vieworders.php">
 							<i class="material-icons">book</i>
 							<span class="mt-aside pl-3">View Orders</span>
 						</a>
@@ -46,6 +46,7 @@ if(isset($_SESSION['email'])){
 					<h4 class="text-secondary">Menu Details</h4>
 					<hr>
 
+          <div class="table-responsive">
 					<table class="table table-striped" id="my-table">
         				<thead>
             				<tr>
@@ -57,46 +58,50 @@ if(isset($_SESSION['email'])){
             				</tr>
         				</thead>
         				<tbody>
-            				@foreach($details as $room)
-            				<tr>
-                				<td>{{$room->name}}</td>
-                				<td><img src="/uploads/{{$room->img1}}" style="height: 50px; width: 50px;"></td>
-                				<td>{{$room->view}}</td>
-                				<td>{{$room->occupancy}}</td>
-                				<td>{{$room->type}}</td>
-                				<td>{{$room->size}} sqft</td>
-            				</tr>
-            				@endforeach
+                  <?php
+                  $user_id = $_SESSION['rest_id'];
+                  $query = "SELECT name, img, description, type, best_price FROM fooditems WHERE rest_id='" . $user_id . "'";
+                  $result = mysqli_query($con, $query)or die($mysqli_error($con));
+                  if(mysqli_num_rows($result) >= 1){
+                    while($row = mysqli_fetch_array($result)){
+                      $picture = "'uploads/".$row['img']."'";
+                      echo "<tr><td>". $row["name"] ."</td>";
+                      echo "<td><img src=". $picture . "style='height: 50px; width: 50px;'></td>";
+                      echo "<td>". $row['description'] ."</td>";
+                      echo "<td>". $row['type'] ."</td>";
+                      echo "<td>". $row['best_price'] ."</td>";
+                      echo "</tr>";
+                    }
+                  }
+                   ?>
+
         				</tbody>
     				</table>
+          </div>
 
 					<button type="button" class="btn btn-default" id="addfood">Add Item</button>
 					<button type="button" class="btn btn-default" style="display: none;" id="back">Back</button>
 
-					<div class="alert alert-danger">
-						<ul>
-							<?php
-    	          if(isset($_GET["m1"])){
-    	            echo "<li>".$_GET['m1']."</li>";
-    	          }?>
-							<?php
-    	          if(isset($_GET["m2"])){
-    	            echo "<li>".$_GET['m2']."</li>";
-    	          }?>
-							<?php
-    	          if(isset($_GET["m3"])){
-    	            echo "<li>".$_GET['m3']."</li>";
-    	          }?>
-						</ul>
-					</div>
+          <?php if(isset($_GET["m1"]) || isset($_GET["m2"]) || isset($_GET["m3"]) || isset($_GET["i1"])){
+            echo "<div class='alert alert-danger'><ul>";
+            if(isset($_GET["m1"])){
+              echo "<li>".$_GET['m1']."</li>";
+            }
+            if(isset($_GET["m2"])){
+              echo "<li>".$_GET['m2']."</li>";
+            }
+            if(isset($_GET["i1"])){
+              echo "<li>".$_GET['i1']."</li>";
+            }
+            if(isset($_GET["m3"])){
+              echo "<li>".$_GET['m3']."</li>";
+            }
+            echo "</ul></div>";
+          }?>
 
-					@if(\Session::has('success'))
-					<div class="alert alert-success">
-						<p>{{\Session::get('success')}}</p>
-
-					</div>
-
-					@endif
+          <?php if(isset($_GET["m4"])){
+            echo "<div class='alert alert-success'><p>".$_GET['m4']."</p></div>";
+          }?>
 
 					<form action="addmenuitem_script.php" method="post" id="formnew" style="display: none;" name="food" enctype="multipart/form-data">
 						<div class="row">
@@ -110,7 +115,7 @@ if(isset($_SESSION['email'])){
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="Name">Food Name</label>
-													<input type="text" name="name" id="Name" value="{{ old('name') }}" class="form-control">
+													<input type="text" name="name" id="Name" value="" class="form-control">
 												</div>
 											</div>
 										</div>
@@ -118,7 +123,7 @@ if(isset($_SESSION['email'])){
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="Description">Food Description</label>
-													<textarea name="description" id="Description"  class="form-control" rows="5" cols="40" maxlength="1000">{{ old('description') }}</textarea>
+													<textarea name="description" id="Description"  class="form-control" rows="5" cols="40" maxlength="1000"><?php echo isset($_POST["description"]) ? $_POST["description"] : ''; ?></textarea>
 												</div>
 											</div>
 										</div>
@@ -172,7 +177,7 @@ if(isset($_SESSION['email'])){
 											<div class="col-md-6">
 												<div class="form-group">
 													<label>Best Price</label>
-													<input type="number" name="best_price" class="form-control" value="{{ old('best_price') }}">
+													<input type="number" name="best_price" class="form-control" value="<?php echo isset($_POST["best_price"]) ? $_POST["best_price"] : ''; ?>">
 
 												</div>
 											</div>
@@ -194,7 +199,6 @@ if(isset($_SESSION['email'])){
 		</div>
 	</div>
 
-	<?php include 'includes/footer.php' ?>
   <script type="text/javascript" src="js/addmenuitem.js"></script>
 </body>
 </html>

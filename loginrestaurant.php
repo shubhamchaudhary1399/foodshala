@@ -27,7 +27,7 @@ header('location: index.php');
 				<input type="email" name="Email" id="email" placeholder="Email" required="">
 
 				<label for="password">Password</label><br>
-				<input type="password" name="Password" id="password" placeholder="Password" pattern=".{6,}" required="">
+				<input type="password" name="Password" id="password" placeholder="Password">
 				<span><a href="register.php" class="links" style="padding: 4px 10px 4px 0;">Create account</a></span>
 				<input type="submit" name="Submit" value="Login" onclick="" class="menu-link" style="border:none;">
 				<?php

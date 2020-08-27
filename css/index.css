@@ -1,0 +1,84 @@
+.my-btn{
+	padding: 4px 6px;
+	position: relative;
+  background: #71a1d1;
+  color: #FFF;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.my-btn:hover, .my-btn:focus, .my-btn:active{
+	color: #FFF !important;
+	background: #81d0e8;
+	box-shadow: none !important;
+}
+
+.cd-column {
+    margin-bottom: 20px;
+}
+
+.my-cd {
+		margin: auto;
+}
+
+.food-features{
+	position: relative;
+	padding: 30px 0;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.features{
+	display: flex;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.indiv-feature{
+	width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+.indiv-feature img{
+	width: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.indiv-feature .feature-content{
+	margin-left: 65px;
+	margin-right: 20px;
+}
+
+.feature-content .heading{
+	font-family: 'Gentona';
+	font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 2px 0;
+}
+
+@media screen and (max-width: 1200px){
+	.food-features{
+		padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+	.food-features{
+		padding: 25px 16px;
+    }
+
+    .features{
+    	display: block;
+    }
+
+    .indiv-feature{
+    	flex-shrink: 0;
+    	width: 100%;
+    	float: none;
+    	margin-bottom: 20px;
+    	display: block;
+    }
+}

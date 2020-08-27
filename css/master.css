@@ -4,6 +4,10 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+.my-font{
+	font-family: 'Roboto', sans-serif;
+}
+
 .material-icons.md-36{
   font-size: 36px;
 }

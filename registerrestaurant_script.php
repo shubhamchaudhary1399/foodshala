@@ -47,7 +47,7 @@
     mysqli_query($con, $query) or die(mysqli_error($con));
     $user_id = mysqli_insert_id($con);
 
-    $_SESSION['name'] = $name;
+    $_SESSION['rest_name'] = $name;
     $_SESSION['email'] = $email;
     $_SESSION['rest_id'] = $user_id;
     $_SESSION['type'] = 'restaurant';

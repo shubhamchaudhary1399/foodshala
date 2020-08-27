@@ -1,0 +1,19 @@
+.cd-column{
+  margin-bottom: 20px;
+}
+
+.my-cd {
+    margin: auto;
+}
+
+.food-btn{
+	background: #71a1d1;
+	color: #FFF;
+  border: none;
+}
+
+.food-btn:hover, .food-btn:focus, .food-btn:active{
+  color: #FFF !important;
+	background: #81d0e8;
+  box-shadow: none !important;
+}

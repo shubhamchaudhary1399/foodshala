@@ -22,7 +22,7 @@ if (isset($_SESSION['email'])) {
 			<form method="POST" action="register_script.php" name="Register">
 				<div class="f_name">
 					<label for="fname">First name (required)</label><br>
-					<input type="text" name="firstname" id="fname" placeholder="First name" value="<?php echo isset($_POST["firstname"]) ? $_POST["firstname"] : ''; ?>">
+					<input type="text" name="firstname" id="fname" placeholder="First name" value="">
 				</div>
 				<div class="l_name">
 					<label for="lname">Last name (optional)</label><br>

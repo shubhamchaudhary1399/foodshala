@@ -13,15 +13,14 @@
 		<div class="row-social">
 			<div style="padding-top: 12px;" class="title-social">Discover FoodShala</div>
 			<div class="links-social">
-			<a href="#" class="tags links" target="_blank">Offers</a>
-			<a href="#" class="tags links" target="_blank">Rewards</a>
-			<a href="#" class="tags links" target="_blank">Help</a>
-			<!-- <a href="#" class="tags links">Contact Us</a> -->
+			<a href="#" class="tags links" >Offers</a>
+			<a href="#" class="tags links" >Rewards</a>
+			<a href="#" class="tags links" >Help</a>
 			</div>
 			<div class="links-account">
-			<a href="#" class="tags links">Login</a>
-			<a href="#" class="tags links">Signup</a>
-			<a href="#" class="tags links">See Menu</a>
+			<a href="login.php" class="tags links">Login</a>
+			<a href="register.php" class="tags links">Register</a>
+			<a href="menu.php" class="tags links">See Menu</a>
 			</div>
 		</div>
 

@@ -13,12 +13,11 @@
 				if(trim($_SESSION['type']) == "customer"){ ?>
 
             <div class="navbar-l">
-				<a href="settings.php" class="links">Hello <?php echo $_SESSION['firstname']; ?></a>
+				<a href="index.php" class="links">Hello <?php echo $_SESSION['firstname']; ?></a>
 			</div>
 
 			<div class="navbar-r">
-        <a href="fleet.php" class="links">Offers</a>
-				<a href="drive.php" class="links">Rewards</a>
+				<a href="myorders.php" class="links">My Orders</a>
 				<a href="logout_script.php" class="links">Logout</a>
 				<a class="menu-link links" href="menu.php">See Menu</a>
 			</div>
@@ -28,20 +27,17 @@
 		<div class="sidebar-navbar" style="">
 			<span class="cbtn" onclick="burger()">&times;</span>
 			<ul class="nav_ul">
-        <li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
+        <li><a href="index.php" class="links nav-links">
+          <span class="material-icons material-icon">account_circle</span>
+          <span class="mt-aside">Hi <?php echo $_SESSION['firstname']; ?></span></a></li>
+				<li><a href="menu.php" class="links nav-links">
+          <span class="material-icons material-icon">menu_book</span>
+          <span class="mt-aside">See Menu</span></a></li>
+				<li><a href="myorders.php" class="links nav-links">
+          <span class="material-icons material-icon">local_shipping</span>
+          <span class="mt-aside">My Orders</span></a></li>
 				<li><a href="logout_script.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
+          <span class="material-icons material-icon">exit_to_app</span>
           <span class="mt-aside">Logout</span></a></li>
 
 			</ul>
@@ -54,12 +50,12 @@
 	else if(trim($_SESSION['type']) == "restaurant"){	?>
 
 		<div class="navbar-l">
-<a href="settings.php" class="links">Hello <?php echo $_SESSION['name']; ?></a>
+<a href="index.php" class="links">Hello <?php echo $_SESSION['rest_name']; ?></a>
 </div>
 
 <div class="navbar-r">
-<a href="fleet.php" class="links">Offers</a>
-<a href="drive.php" class="links">Rewards</a>
+<a href="menu.php" class="links">See Menu</a>
+<a href="vieworders.php" class="links">View Orders</a>
 <a href="logout_script.php" class="links">Logout</a>
 <a class="menu-link links" href="addmenuitem.php">Add Menu item</a>
 </div>
@@ -69,21 +65,21 @@
 <div class="sidebar-navbar" style="">
 <span class="cbtn" onclick="burger()">&times;</span>
 <ul class="nav_ul">
-<li><a href="login.php" class="links nav-links">
+<li><a href="index.php" class="links nav-links">
+	<span class="material-icons material-icon">account_circle</span>
+	<span class="mt-aside">Hi <?php echo $_SESSION['rest_name']; ?></span></a></li>
+<li><a href="menu.php" class="links nav-links">
+	<span class="material-icons material-icon">menu_book</span>
+	<span class="mt-aside">See Menu</span></a></li>
+<li><a href="vieworders.php" class="links nav-links">
+	<span class="material-icons material-icon">book</span>
+	<span class="mt-aside">View Orders</span></a></li>
+<li><a href="addmenuitem.php" class="links nav-links">
 	<span class="material-icons material-icon">fastfood</span>
-	<span class="mt-aside">Login</span></a></li>
-<li><a href="login.php" class="links nav-links">
-	<span class="material-icons material-icon">fastfood</span>
-	<span class="mt-aside">Login</span></a></li>
-<li><a href="login.php" class="links nav-links">
-	<span class="material-icons material-icon">fastfood</span>
-	<span class="mt-aside">Login</span></a></li>
-<li><a href="login.php" class="links nav-links">
-	<span class="material-icons material-icon">fastfood</span>
-	<span class="mt-aside">Login</span></a></li>
-<li><a href="login.php" class="links nav-links">
-	<span class="material-icons material-icon">fastfood</span>
-	<span class="mt-aside">Login</span></a></li>
+	<span class="mt-aside">Add Menu Item</span></a></li>
+<li><a href="logout_script.php" class="links nav-links">
+	<span class="material-icons material-icon">exit_to_app</span>
+	<span class="mt-aside">Logout</span></a></li>
 
 </ul>
 </div>
@@ -98,9 +94,6 @@
 			</div>
 
 			<div class="navbar-r">
-				<a href="fleet.php" class="links">Offers</a>
-				<a href="drive.php" class="links">Rewards</a>
-				<a href="aboutus.php" class="links">Help</a>
 				<a class="menu-link links" href="menu.php">See Menu</a>
 			</div>
 		</div>
@@ -110,21 +103,14 @@
 			<span class="cbtn" onclick="burger()">&times;</span>
 			<ul class="nav_ul">
 				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
+          <span class="material-icons material-icon">login</span>
           <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-				<li><a href="login.php" class="links nav-links">
-          <span class="material-icons material-icon">fastfood</span>
-          <span class="mt-aside">Login</span></a></li>
-
+				<li><a href="register.php" class="links nav-links">
+          <span class="material-icons material-icon">account_book</span>
+          <span class="mt-aside">Register</span></a></li>
+				<li><a href="menu.php" class="links nav-links">
+          <span class="material-icons material-icon">menu_book</span>
+          <span class="mt-aside">See Menu</span></a></li>
 			</ul>
 		</div>
 

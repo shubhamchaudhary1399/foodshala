@@ -17,7 +17,7 @@ if ($num == 0) {
 } else {
   $row = mysqli_fetch_array($result);
 
-  $_SESSION['name'] = $row['name'];
+  $_SESSION['rest_name'] = $row['name'];
   $_SESSION['email'] = $row['email'];
   $_SESSION['rest_id'] = $row['id'];
   $_SESSION['type'] = 'restaurant';
