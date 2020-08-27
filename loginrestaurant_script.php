@@ -21,6 +21,6 @@ if ($num == 0) {
   $_SESSION['email'] = $row['email'];
   $_SESSION['rest_id'] = $row['id'];
   $_SESSION['type'] = 'restaurant';
-  header('location: index.php');
+  header('location: dashboard.php');
 }
 ?>
