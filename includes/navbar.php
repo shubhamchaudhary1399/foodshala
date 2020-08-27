@@ -106,7 +106,7 @@
           <span class="material-icons material-icon">login</span>
           <span class="mt-aside">Login</span></a></li>
 				<li><a href="register.php" class="links nav-links">
-          <span class="material-icons material-icon">account_book</span>
+          <span class="material-icons material-icon">account_circle</span>
           <span class="mt-aside">Register</span></a></li>
 				<li><a href="menu.php" class="links nav-links">
           <span class="material-icons material-icon">menu_book</span>
