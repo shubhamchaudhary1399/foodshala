@@ -58,6 +58,7 @@
 .menu-link:hover{
 	color: #FFF !important;
 	background: #81d0e8;
+	box-shadow: none !important;
 }
 
 .hide-lg{
