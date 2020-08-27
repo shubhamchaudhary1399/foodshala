@@ -51,6 +51,6 @@
     $_SESSION['email'] = $email;
     $_SESSION['rest_id'] = $user_id;
     $_SESSION['type'] = 'restaurant';
-    header('location: index.php');
+    header('location: dashboard.php');
   }
 ?>
