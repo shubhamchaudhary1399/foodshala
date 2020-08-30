@@ -2,6 +2,10 @@
 
 FoodShala (Food Booking Web Application)
 
+## This application is hosted online at
+
+- https://appfoodshala.herokuapp.com/
+
 ## Getting Started
 
 Clone the repository into you machine:
