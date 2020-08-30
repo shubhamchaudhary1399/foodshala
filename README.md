@@ -2,10 +2,6 @@
 
 FoodShala (Food Booking Web Application)
 
-## This application is hosted online at
-
-- https://appfoodshala.herokuapp.com/
-
 ## Getting Started
 
 Clone the repository into you machine:
@@ -24,6 +20,9 @@ Open up your browser and go to (127.0.0.1:8000:foodshala/index.php)
 
 here 8000 is the port number (it can be 8080 in your computer)
 
+## Deployment
+
+- This project is already deployed on the link (https://appfoodshala.herokuapp.com/)
 
 ## Built With
 - HTML, CSS, JavaScript
